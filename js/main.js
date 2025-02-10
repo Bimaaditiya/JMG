@@ -76,18 +76,20 @@
 
 
     // Header carousel
-    $(".header-carousel").owlCarousel({
-        autoplay: false,
-        smartSpeed: 1500,
-        items: 1,
-        dots: false,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ]
-    });
+$(".header-carousel").owlCarousel({
+    autoplay: false,
+    smartSpeed: 1500,
+    items: 1,
+    dots: false,
+    loop: true,
+    nav: true,
+    navText: [
+        '<i class="bi bi-chevron-left"></i>',
+        '<i class="bi bi-chevron-right"></i>'
+    ],
+    touchDrag: false, // Nonaktifkan swipe dengan touch
+    mouseDrag: false // Nonaktifkan swipe dengan mouse
+});
 
 
     // Testimonials carousel
