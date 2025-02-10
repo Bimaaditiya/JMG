@@ -63,7 +63,7 @@
     <!-- Navbar End -->
 
 
-   <!-- Carousel Start -->
+  <!-- Carousel Start -->
 <div class="container-fluid p-0 pb-5">
     <div class="owl-carousel header-carousel position-relative mb-5">
         <div class="owl-carousel-item position-relative">
@@ -84,6 +84,19 @@
 </div>
 <!-- Carousel End -->
 
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            items: 1, // Jumlah item yang ditampilkan
+            loop: true, // Loop carousel
+            autoplay: true, // Autoplay carousel
+            autoplayTimeout: 5000, // Waktu autoplay
+            autoplayHoverPause: true, // Pause autoplay saat hover
+            touchDrag: false, // Nonaktifkan swipe dengan touch
+            mouseDrag: false // Nonaktifkan swipe dengan mouse
+        });
+    });
+</script>
 
 
 
