@@ -43,7 +43,7 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5  sticky-top p-0">
         <a href="index.html" class="navbar-brand bg-white d-flex align-items-center px-4 px-lg-5">
             <!-- Ganti teks dengan logo -->
             <img src="img/logo.png" alt="JMG Express Logo" class="logo-img" style="height: 65px;">
@@ -52,37 +52,74 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link link">Home</a>
-                <a href="service.html" class="nav-item nav-link">Layanan</a>
-                <a href="team.html" class="nav-item nav-link">Team</a>
-                <a href="contact.html" class="nav-item nav-link">Kontak</a>
+            <div class="navbar-nav ms-auto p-4 p-lg-0 align-items-center"> <!-- Tambahkan align-items-center di sini -->        
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="Layanan/cargo.html" class="dropdown-item">Cargo</a>
+                        <a href="Layanan/container.html" class="dropdown-item">Heavy Cargo</a>
+                        <a href="Layanan/truk.html" class="dropdown-item">Kirim Mobil & alat berat</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="Resources/FAQ.html" class="dropdown-item">FAQ (Help Center)</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Kontak</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="Kontak/about.html" class="dropdown-item">Tentang JMG Express</a>
+                        <a href="Kontak/contact2.html" class="dropdown-item">Kontak</a>
+                        <a href="Kontak/contact.html" class="dropdown-item">Lokasi</a>
+                    </div>
+                </div>
+                <!-- Tombol WhatsApp Sekarang -->
+                <a href="https://wa.me/628111115777" class="nav-item nav-link whatsapp-btn" target="_blank">
+                    WhatsApp Sekarang
+                </a>
             </div>
         </div>
     </nav>
     <!-- Navbar End -->
 
 
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5">
-        <div class="owl-carousel header-carousel position-relative mb-5">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Mendukung Pengembangan Bisnis Anda ke Seluruh Nusantara</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Kembangkan Area Bisnis Perusahaan Anda, Jangkau Customer dimanapun Berada, Bersama Partner Cargo Tercepat, Teraman, dan Ternyaman di Indonesia.</p>
-                                <a href="https://wa.me/+6282110188248" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Hubungi TIM JMG EXPRESS</a>
-                            </div>
+  <!-- Carousel Start -->
+<div class="container-fluid p-0 pb-5">
+    <div class="owl-carousel header-carousel position-relative mb-5">
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h1 class="display-3 text-white animated slideInDown mb-4">Mendukung Pengembangan Bisnis Anda ke Seluruh Nusantara</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Kembangkan Area Bisnis Perusahaan Anda, Jangkau Customer dimanapun Berada, Bersama Partner Cargo Tercepat, Teraman, dan Ternyaman di Indonesia.</p>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Carousel End -->
+</div>
+<!-- Carousel End -->
+
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            items: 1, // Jumlah item yang ditampilkan
+            loop: true, // Loop carousel
+            autoplay: true, // Autoplay carousel
+            autoplayTimeout: 5000, // Waktu autoplay
+            autoplayHoverPause: true, // Pause autoplay saat hover
+            touchDrag: false, // Nonaktifkan swipe dengan touch
+            mouseDrag: false // Nonaktifkan swipe dengan mouse
+        });
+    });
+</script>
+
 
 
     <!-- About Start -->
@@ -110,6 +147,7 @@
             <div class="row g-5 mx-lg-0">
                 <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
                    
+                    <h1 class="mb-5">Alasan JMG Express terus Dipercaya</h1>
                     
                     <!-- Service 1 - Existing -->
                     <div class="d-flex mb-5 wow fadeInUp" data-wow-delay="0.3s">
@@ -177,42 +215,31 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item p-4">
                         <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/a.png" alt="">
+                            <img class="img-fluid" src="img/h3.jpg" alt="">
                         </div>
-                        <h4 class="mb-3">Pengiriman Barang</h4>
+                        <h4 class="mb-3">Cargo</h4>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item p-4">
                         <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/b.png" alt="">
+                            <img class="img-fluid" src="img/h1.jpg" alt="">
                         </div>
-                        <h4 class="mb-3">Pengiriman Cargo</h4>
+                        <h4 class="mb-3">Heavy Cargo</h4>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="service-item p-4">
                         <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/c.jpg" alt="">
+                            <img class="img-fluid" src="img/h2.jpg" alt="">
                         </div>
-                        <h4 class="mb-3">Pengiriman Trucking</h4>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/d.png" alt="">
-                        </div>
-                        <h4 class="mb-3">Pengiriman Kontainer</h4>
+                        <h4 class="mb-3">Kirim Mobil & Alat Berat</h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Service End -->
-
-    
-
 
     <!-- Feature Start -->
     <div class="container-fluid overflow-hidden py-5 px-lg-0">
@@ -402,13 +429,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+6282110188248</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>joomarsonmultiguna@gmail.com</p>
                      
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Tentang kami</h4>
-                    <a class="btn btn-link" href="about.html">Cerita Kami</a>
-                    <a class="btn btn-link" href="service.html">Layanan</a>
-                    <a class="btn btn-link" href="team.html">Team</a>
-                    <a class="btn btn-link" href="contact.html">Kontak</a>
                 </div>
                 
             </div>

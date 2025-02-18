@@ -75,40 +75,25 @@
     });
 
 
-    // Header carousel
-    $(".header-carousel").owlCarousel({
-        autoplay: false,
-        smartSpeed: 1500,
-        items: 1,
-        dots: false,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ]
-    });
+ // Header carousel
+$(".header-carousel").owlCarousel({
+    autoplay: false, // Nonaktifkan autoplay
+    smartSpeed: 1500, // Kecepatan transisi
+    items: 1, // Jumlah item yang ditampilkan
+    dots: false, // Nonaktifkan dots (indikator)
+    loop: true, // Loop carousel
+    nav: true, // Aktifkan tombol navigasi
+    navText: [
+        '<i class="bi bi-chevron-left"></i>',
+        '<i class="bi bi-chevron-right"></i>'
+    ],
+    touchDrag: false, // Nonaktifkan swipe dengan touch
+    mouseDrag: false, // Nonaktifkan swipe dengan mouse
+    pullDrag: false, // Nonaktifkan drag saat menarik
+    freeDrag: false // Nonaktifkan drag bebas
+});
 
-
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: false,
-        smartSpeed: 1000,
-        center: true,
-        dots: true,
-        loop: true,
-        responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            }
-        }
-    });
     
 })(jQuery);
+
 

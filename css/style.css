@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FF3E41;
+    --primary: #162438;
     --secondary: #51CFED;
     --light: #F8F2F0;
     --dark: #060315;
@@ -71,13 +71,137 @@
 }
 
 /*** Navbar ***/
-.navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    vertical-align: middle;
-    margin-left: 8px;
+/* Style untuk nav-item dropdown */
+.nav-item.dropdown {
+    position: relative;
+}
+
+/* Style untuk nav-link dropdown toggle */
+.nav-link.dropdown-toggle {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link.dropdown-toggle:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+/* Style untuk dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Style untuk dropdown item */
+.dropdown-item {
+    color: #333;
+    padding: 8px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Efek fade-up saat dropdown muncul */
+.dropdown-menu.fade-up {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item.dropdown:hover .dropdown-menu.fade-up {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Tampilkan dropdown menu saat hover */
+/* Style untuk navbar */
+.navbar-nav {
+    display: flex;
+    align-items: center; /* Pastikan semua item sejajar vertikal */
+}
+
+.nav-item {
+    display: flex;
+    align-items: center; /* Pastikan teks dan ikon sejajar */
+    margin-right: 20px; /* Jarak antar item */
+}
+
+.nav-link {
+    padding: 10px 15px !important; /* Padding yang konsisten */
+    color: var(--dark) !important; /* Warna teks */
+    font-weight: 500; /* Ketebalan teks */
+    text-transform: uppercase; /* Huruf kapital */
+    transition: color 0.3s ease; /* Efek transisi */
+}
+
+.nav-link:hover {
+    color: #162438 !important; /* Warna saat hover */
+}
+
+/* Style untuk tombol WhatsApp */
+.whatsapp-btn {
+    background-color: #007bff; /* Warna hijau WhatsApp */
+    color: #FFFFFF !important; /* Warna teks putih */
+    padding: 10px 20px !important; /* Padding untuk tombol */
+    border-radius: 5px; /* Sudut melengkung */
+    font-weight: bold; /* Tebalkan teks */
+    text-transform: uppercase; /* Huruf kapital */
+    margin-left: 15px; /* Jarak dari item navbar lainnya */
+    transition: background-color 0.3s ease; /* Efek transisi */
+}
+
+.whatsapp-btn:hover {
+    background-color: #007bff; /* Warna hijau lebih gelap saat hover */
+    color: #FFFFFF !important; /* Pastikan teks tetap putih */
+}
+
+/* Responsive design untuk navbar */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        flex-direction: column; /* Tampilkan item secara vertikal di layar kecil */
+        align-items: flex-start; /* Rata kiri */
+    }
+
+    .nav-item {
+        margin-right: 0; /* Hilangkan margin di layar kecil */
+        margin-bottom: 500px; /* Jarak antar item */
+    }
+
+    .whatsapp-btn {
+        margin-left: 0; /* Hilangkan margin di layar kecil */
+        margin-top: 10px; /* Jarak dari item navbar di atasnya */
+        width: 100%; /* Lebar penuh */
+        text-align: center; /* Teks di tengah */
+    }
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -92,7 +216,7 @@
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: #162438;
 }
 
 @media (max-width: 991.98px) {
@@ -282,6 +406,7 @@
 }
 
 
+
 /*** Service, Price & Team ***/
 .service-item,
 .price-item,
@@ -321,7 +446,7 @@
     align-items: center;
     font-size: 16px;
     color: #FFFFFF;
-    background: var(--primary);
+    background: #162438;
     border-radius: 0 35px 35px 0;
     transition: .5s;
     z-index: 2;
@@ -363,39 +488,6 @@
 }
 
 
-/*** Testimonial ***/
-.testimonial-carousel .owl-item .testimonial-item {
-    position: relative;
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-item.center .testimonial-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    animation: pulse 1s ease-out .5s;
-}
-
-.testimonial-carousel .owl-dots {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.testimonial-carousel .owl-dot {
-    position: relative;
-    display: inline-block;
-    margin: 0 5px;
-    width: 15px;
-    height: 15px;
-    background: var(--primary);
-    border: 5px solid var(--light);
-    border-radius: 15px;
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-dot.active {
-    background: var(--light);
-    border-color: var(--primary);
-}
 
 
 /*** Contact ***/
@@ -478,4 +570,89 @@
 
 .footer .copyright a {
     color: var(--light);
+}
+
+/* Style untuk bagian kontak */
+.contact {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.contact-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.contact-item h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.contact-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.contact-item {
+    flex: 1;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-item:last-child {
+    margin-right: 0;
+}
+
+/* Style untuk ikon */
+.contact-item .icon {
+    font-size: 2rem;
+    color: #007bff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9f5ff;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Efek animasi wow */
+.wow {
+    visibility: hidden;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contact-text h1 {
+        font-size: 2rem;
+    }
+
+    .contact-item h2 {
+        font-size: 1.25rem;
+    }
+
+    .contact-item p {
+        font-size: 0.9rem;
+    }
+
+    .contact-item .icon {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .d-flex.flex-wrap {
+        flex-direction: column;
+    }
+
+    .contact-item {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
 }
