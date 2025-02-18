@@ -72,50 +72,39 @@
 
 /*** Navbar ***/
 /* Style untuk nav-item dropdown */
-.nav-item.dropdown {
-    position: relative;
+.navbar-nav {
+    display: flex;
+    align-items: center;
 }
 
-/* Style untuk nav-link dropdown toggle */
-.nav-link.dropdown-toggle {
-    color: #333;
-    padding: 10px 15px;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+.nav-item {
+    margin-right: 15px;
 }
 
-.nav-link.dropdown-toggle:hover {
-    background-color: #f8f9fa;
-    color: #007bff;
+.nav-link {
+    padding: 10px 15px !important;
+    color: var(--dark) !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
 }
 
-/* Style untuk dropdown menu */
+.nav-link:hover {
+    color: #162438 !important;
+}
+
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
+    margin: 0;
+    padding: 0;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Style untuk dropdown item */
 .dropdown-item {
+    padding: 8px 15px;
     color: #333;
-    padding: 8px 20px;
     text-decoration: none;
-    display: block;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -124,167 +113,39 @@
     color: #fff;
 }
 
-/* Efek fade-up saat dropdown muncul */
-.dropdown-menu.fade-up {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-}
-
-.nav-item.dropdown:hover .dropdown-menu.fade-up {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-/* Tampilkan dropdown menu saat hover */
-/* Style untuk navbar */
-.navbar-nav {
-    display: flex;
-    align-items: center; /* Pastikan semua item sejajar vertikal */
-}
-
-.nav-item {
-    display: flex;
-    align-items: center; /* Pastikan teks dan ikon sejajar */
-    margin-right: 20px; /* Jarak antar item */
-}
-
-.nav-link {
-    padding: 10px 15px !important; /* Padding yang konsisten */
-    color: var(--dark) !important; /* Warna teks */
-    font-weight: 500; /* Ketebalan teks */
-    text-transform: uppercase; /* Huruf kapital */
-    transition: color 0.3s ease; /* Efek transisi */
-}
-
-.nav-link:hover {
-    color: #162438 !important; /* Warna saat hover */
-}
-
-/* Style untuk tombol WhatsApp */
 .whatsapp-btn {
-    background-color: #007bff; /* Warna hijau WhatsApp */
-    color: #FFFFFF !important; /* Warna teks putih */
-    padding: 10px 20px !important; /* Padding untuk tombol */
-    border-radius: 5px; /* Sudut melengkung */
-    font-weight: bold; /* Tebalkan teks */
-    text-transform: uppercase; /* Huruf kapital */
-    margin-left: 15px; /* Jarak dari item navbar lainnya */
-    transition: background-color 0.3s ease; /* Efek transisi */
+    background-color: #007bff;
+    color: #FFFFFF !important;
+    padding: 10px 20px !important;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .whatsapp-btn:hover {
-    background-color: #007bff; /* Warna hijau lebih gelap saat hover */
-    color: #FFFFFF !important; /* Pastikan teks tetap putih */
+    background-color: #0056b3;
 }
 
-/* Responsive design untuk navbar */
 @media (max-width: 991.98px) {
     .navbar-nav {
-        flex-direction: column; /* Tampilkan item secara vertikal di layar kecil */
-        align-items: flex-start; /* Rata kiri */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .nav-item {
-        margin-right: 0; /* Hilangkan margin di layar kecil */
-        margin-bottom: 500px; /* Jarak antar item */
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
     .whatsapp-btn {
-        margin-left: 0; /* Hilangkan margin di layar kecil */
-        margin-top: 10px; /* Jarak dari item navbar di atasnya */
-        width: 100%; /* Lebar penuh */
-        text-align: center; /* Teks di tengah */
-    }
-}
-
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    position: relative;
-    margin-right: 30px;
-    padding: 25px 0;
-    color: #FFFFFF;
-    font-size: 15px;
-    text-transform: uppercase;
-    outline: none;
-}
-
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
-    color: #162438;
-}
-
-@media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
-        margin-right: 0;
-        padding: 10px 0;
-    }
-
-    .navbar-light .navbar-nav {
-        border-top: 1px solid #EEEEEE;
-    }
-}
-
-.navbar-light .navbar-brand,
-.navbar-light a.btn {
-    height: 75px;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: var(--dark);
-    font-weight: 500;
-}
-
-.navbar-light.sticky-top {
-    top: -100px;
-    transition: .5s;
-}
-
-@media (min-width: 992px) {
-    .navbar-light .navbar-nav .nav-link::before {
-        position: absolute;
-        content: "";
-        width: 0;
-        height: 5px;
-        top: -6px;
-        left: 50%;
-        background: #FFFFFF;
-        transition: .5s;
-    }
-
-    .navbar-light .navbar-nav .nav-link:hover::before,
-    .navbar-light .navbar-nav .nav-link.active::before {
+        margin-left: 0;
+        margin-top: 10px;
         width: 100%;
-        left: 0;
-    }
-
-    .navbar-light .navbar-nav .nav-link.nav-contact::before {
-        display: none;
-    }
-
-    .navbar .nav-item .dropdown-menu {
-        display: block;
-        border: none;
-        margin-top: 0;
-        top: 150%;
-        opacity: 0;
-        visibility: hidden;
-        transition: .5s;
-    }
-
-    .navbar .nav-item:hover .dropdown-menu {
-        top: 100%;
-        visibility: visible;
-        transition: .5s;
-        opacity: 1;
+        text-align: center;
     }
 }
-
 
 /*** Header ***/
 .logo-img {
